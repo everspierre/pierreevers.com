@@ -1,0 +1,57 @@
+/**
+ *  CSS RESET
+ */
+* {
+    padding:0 !important;
+    margin:0 !important;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+::-moz-selection {
+    color: #f9f1f0;
+    background: #f79489;
+}
+
+::selection {
+    color: #f9f1f0;
+    background: #f79489;
+}
+
+/**
+ *  SECTION
+ */
+body .section {
+    height: 100%;
+}
+
+/**
+ *  SECTION - ACCUEIL
+ */
+#accueil .row {
+    height: 50%;
+}
+
+#accueil .row:nth-child(2):before {
+    background: center / cover no-repeat url('https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_960_720.jpg');
+    content:"";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+#accueil .title h1 {
+    font-size: 7em;
+}
+
+#accueil .title h2 {
+    font-size: 3.5em;
+    font-family: 'Road Rage', sans-serif;
+}
