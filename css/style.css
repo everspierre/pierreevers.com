@@ -59,12 +59,23 @@ body .section {
 /**
  *  SECTION - COMPETENCES
  */
-
 #competences h1 {
     font-size: 7em;
 }
 
 #competences h2 {
+    font-size: 3.5em;
+    font-family: 'Road Rage', sans-serif;
+}
+
+/**
+ *  SECTION - A PROPOS
+ */
+#apropos h1 {
+    font-size: 7em;
+}
+
+#apropos h2 {
     font-size: 3.5em;
     font-family: 'Road Rage', sans-serif;
 }
