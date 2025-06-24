@@ -79,3 +79,15 @@ body .section {
     font-size: 3.5em;
     font-family: 'Road Rage', sans-serif;
 }
+
+/**
+ *  SECTION - CONTACT
+ */
+#contact h1 {
+    font-size: 7em;
+}
+
+#contact h2 {
+    font-size: 3.5em;
+    font-family: 'Road Rage', sans-serif;
+}
