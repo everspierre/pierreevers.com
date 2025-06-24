@@ -12,11 +12,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#menu">
     <!-- SECTION ACCUEIL -->
     <header id="accueil" class="section">
         <div class="row"></div>
@@ -27,12 +26,25 @@
                 <p class="mt-5 text-secondary"><i class="bi bi-geo-alt"></i> Angers (49)</p>
             </div>
         </div>
+        <!-- MENU -->
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="menu">
+                    <div class="navbar-nav mx-auto">
+                        <a class="nav-link active p-4" aria-current="page" href="#accueil">Accueil</a>
+                        <a class="nav-link p-4" href="#competences">Compétences</a>
+                        <a class="nav-link p-4" href="#apropos">A Propos</a>
+                        <a class="nav-link p-4" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <!-- SECTION COMPETENCES -->
     <div id="competences" class="section bg-secondary pt-5 d-flex flex-column flex-grow-1">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                <h1 class="text-primary">Mes compétences</h1>
+                <h1 class="text-primary pt-5">Mes compétences</h1>
             </div>
         </div>
         <div class="d-flex flex-column flex-grow-1 justify-content-center">
@@ -159,7 +171,7 @@
     <div id="apropos" class="section bg-light pt-5 d-flex flex-column flex-grow-1">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                <h1 class="text-dark">À Propos</h1>
+                <h1 class="text-dark pt-5">À Propos</h1>
             </div>
         </div>
         <div class="d-flex flex-column flex-grow-1 justify-content-center">
@@ -181,7 +193,7 @@
     <div id="contact" class="section bg-dark pt-5 d-flex flex-column flex-grow-1">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                <h1 class="text-secondary">Me contacter</h1>
+                <h1 class="text-secondary pt-5">Me contacter</h1>
             </div>
         </div>
         <div class="d-flex flex-column flex-grow-1 justify-content-center p-5">
@@ -266,5 +278,10 @@
             </div>
         </div>
     </div>
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
