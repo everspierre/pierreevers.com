@@ -238,5 +238,33 @@
             </div>
         </div>
     </div>
+    <!-- SECTION FOOTER -->
+    <footer class="bg-primary">
+        <div class="row p-4 text-secondary">
+            <div class="col-sm-12 col-md-12 col-lg-4 text-start" ><a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#mentionsLegales">Mentions légales</a></div>
+            <div class="col-sm-12 col-md-12 col-lg-4 text-center">Pierre Evers - Copyright © 2025</div>
+            <div class="col-sm-12 col-md-12 col-lg-4 text-end">
+                <a href="https://github.com/everspierre" target="_blank" class="text-secondary h5" title="Portfolio Github"><i class="bi bi-github"></i></a>&nbsp;
+                <a href="https://www.linkedin.com/in/pierre-evers/" target="_blank" class="text-secondary h5" title="Page Linkedin"><i class="bi bi-linkedin"></i></a>&nbsp;
+                <a href="https://wa.link/r9mtqd" target="_blank" class="text-secondary h5" title="Contact Whatsapp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- MODAL - MENTIONS LEGALES -->
+    <div class="modal fade" id="mentionsLegales" tabindex="-1" aria-labelledby="mentionsLegalesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="mentionsLegalesLabel">Mentions légales</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
