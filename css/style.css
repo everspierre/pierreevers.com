@@ -55,3 +55,16 @@ body .section {
     font-size: 3.5em;
     font-family: 'Road Rage', sans-serif;
 }
+
+/**
+ *  SECTION - COMPETENCES
+ */
+
+#competences h1 {
+    font-size: 7em;
+}
+
+#competences h2 {
+    font-size: 3.5em;
+    font-family: 'Road Rage', sans-serif;
+}
