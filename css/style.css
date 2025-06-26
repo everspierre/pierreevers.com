@@ -57,6 +57,13 @@ div.section {
 }
 
 /**
+ *  SECTION - SERVICES
+ */
+#services h1 {
+    padding-top: 100px;
+}
+
+/**
  *  SECTION - COMPETENCES
  */
 #competences h1 {
