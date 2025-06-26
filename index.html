@@ -233,7 +233,7 @@
             </div>
             <div class="row">
                 <div class="col-12 d-flex flex-column vh-100 justify-content-center align-items-center">
-                    <div class="card">
+                    <div class="card p-4" style="width: 85%">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="images/mosaic.png" class="img-fluid rounded-start" alt="Me">
@@ -258,57 +258,66 @@
             <div class="row text-center d-flex">
                 <div class="col-12 position-absolute"><h1 class="text-secondary">Contact</h1></div>
             </div>
+
             <div class="row d-flex flex-row vh-100 justify-content-center align-items-center">
-                <div class="col-md-6 col-lg-4 ps-md-3 ps-lg-5">
-                    <h2 class="text-primary">Je suis ici</h2>
-                    <div class="row text-secondary text-start">
-                        <div class="col-12 mt-4">
-                            <p class="fw-bold"><i class="bi bi-geo-alt"></i> <span class="text-decoration-underline">Adresse</span></p>
-                            <p class="fw-normal">84 rue Saint-Nicolas, 49100 Angers</p>
+                <div class="col-12">
+                    <div class="row d-flex flex-row justify-content-center align-items-start">
+                        <div class="col-md-6 col-lg-3 ps-md-3 ps-lg-5">
+                            <h2 class="text-primary">Je suis ici</h2>
+                            <p class="fw-bold text-secondary">
+                                <i class="bi bi-geo-alt"></i> <span class="text-decoration-underline">Adresse</span><br>
+                                <span class="fw-normal">84 rue Saint-Nicolas, 49100 Angers</span>
+                            </p>
+                            <hr>
+                            <p class="fw-bold text-secondary">
+                                <i class="bi bi-telephone"></i> <span class="text-decoration-underline">Téléphone</span><br>
+                                <span class="fw-normal">+33 6 99 11 72 91</span>
+                            </p>
+                            <hr>
+                            <p class="fw-bold text-secondary">
+                                <i class="bi bi-envelope"></i> <span class="text-decoration-underline">Email</span><br>
+                                <span class="fw-normal">everspierre@gmail.com</span>
+                            </p>
+                            <hr>
+                            <p class="fw-bold text-secondary">
+                                <i class="bi bi-clock"></i> <span class="text-decoration-underline">Horaires</span><br>
+                                <span class="fw-normal">Du Lundi au Vendredi</span><br>
+                                <span class="fw-normal">De 9h à 17h</span>
+                            </p>
+                            <hr>
+                            <p class="fw-bold text-secondary">
+                                <i class="bi bi-briefcase"></i> <span class="text-decoration-underline">SIREN</span><br>
+                                <span class="fw-normal">666 666 666</span>
+                            </p>
                         </div>
-                        <div class="col-12 mt-4">
-                            <p class="fw-bold"><i class="bi bi-telephone"></i> <span class="text-decoration-underline">Téléphone</span></p>
-                            <p class="fw-normal">+33 6 99 11 72 91</p>
+                        <div class="col-md-6 col-lg-5">
+                            <div id="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48444.85966534128!2d-0.5303386043701251!3d47.46133742525845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1750940661763!5m2!1sfr!2sfr" width="100%" height="570px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
-                        <div class="col-12 mt-4">
-                            <p class="fw-bold"><i class="bi bi-envelope"></i> <span class="text-decoration-underline">Email</span></p>
-                            <p class="fw-normal">everspierre@gmail.com</p>
-                        </div>
-                        <div class="col-12 mt-4">
-                            <p class="fw-bold"><i class="bi bi-clock"></i> <span class="text-decoration-underline">Horaires</span></p>
-                            <p class="fw-normal">Du Lundi au Vendredi</p>
-                            <p class="fw-normal">De 9h à 17h</p>
-                        </div>
-                        <div class="col-12 mt-4">
-                            <p class="fw-bold"><i class="bi bi-briefcase"></i> <span class="text-decoration-underline">SIREN</span></p>
-                            <p class="fw-normal">666 666 666</p>
+                        <div class="col-md-6 col-lg-4 pe-md-3 pe-lg-5">
+                            <h2 class="text-primary">Laissez-moi un message</h2>
+                            <form method="post" action="#" class="mt-2">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text p-2" id="inputFullname"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control p-2" placeholder="Nom / Prénom" aria-label="Fullname" aria-describedby="inputFullname">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text p-2" id="inputEmail"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control p-2" placeholder="Email" aria-label="Email" aria-describedby="inputEmail">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text p-2" id="inputPhone"><i class="bi bi-telephone"></i></span>
+                                    <input type="text" class="form-control p-2" placeholder="Téléphone" aria-label="Phone" aria-describedby="inputPhone">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text p-2" id="inputMessage"><i class="bi bi-chat-left"></i></span>
+                                    <textarea  type="text" class="form-control p-2 h-100" placeholder="Message" aria-label="Phone" aria-describedby="inputMessage" rows="10"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary text-secondary w-100">Envoyer</button>
+                            </form>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-
-                </div>
-                <div class="col-md-6 col-lg-4 pe-md-3 pe-lg-5">
-                    <h2 class="text-primary">Laissez-moi un message</h2>
-                    <form method="post" action="#" class="mt-2">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text p-2" id="inputFullname"><i class="bi bi-person"></i></span>
-                            <input type="text" class="form-control p-2" placeholder="Nom / Prénom" aria-label="Fullname" aria-describedby="inputFullname">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text p-2" id="inputEmail"><i class="bi bi-envelope"></i></span>
-                            <input type="email" class="form-control p-2" placeholder="Email" aria-label="Email" aria-describedby="inputEmail">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text p-2" id="inputPhone"><i class="bi bi-telephone"></i></span>
-                            <input type="text" class="form-control p-2" placeholder="Téléphone" aria-label="Phone" aria-describedby="inputPhone">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text p-2" id="inputMessage"><i class="bi bi-chat-left"></i></span>
-                            <textarea  type="text" class="form-control p-2 h-100" placeholder="Message" aria-label="Phone" aria-describedby="inputMessage" rows="10"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary p-2">Envoyer</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -318,9 +327,9 @@
     <footer class="bg-primary text-secondary">
         <div class="container-fluid">
             <div class="row pt-5 pb-5">
-                <div class="col-sm-12 col-md-12 col-lg-4 text-start" ><a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#mentionsLegales">Mentions légales</a></div>
+                <div class="col-sm-12 col-md-12 col-lg-4 text-center" ><a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#mentionsLegales">Mentions légales</a></div>
                 <div class="col-sm-12 col-md-12 col-lg-4 text-center">Pierre Evers - Copyright © 2025</div>
-                <div class="col-sm-12 col-md-12 col-lg-4 text-end">
+                <div class="col-sm-12 col-md-12 col-lg-4 text-center">
                     <a href="https://github.com/everspierre" target="_blank" class="text-secondary h5" title="Portfolio Github"><i class="bi bi-github"></i></a>&nbsp;
                     <a href="https://www.linkedin.com/in/pierre-evers/" target="_blank" class="text-secondary h5" title="Page Linkedin"><i class="bi bi-linkedin"></i></a>&nbsp;
                     <a href="https://wa.link/r9mtqd" target="_blank" class="text-secondary h5" title="Contact Whatsapp"><i class="bi bi-whatsapp"></i></a>
