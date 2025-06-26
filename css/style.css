@@ -1,44 +1,46 @@
 /**
- *  CSS RESET
+ *  RESET
  */
-* {
-    padding:0 !important;
-    margin:0 !important;
-    border:0 !important;
-    outline:0 !important;
-}
-
-body, html {
-    height: 100%;
+body {
+    margin: 0 !important;
+    padding: 0 !important;
     font-family: 'Roboto', sans-serif;
-    position: relative;
 }
 
-::-moz-selection {
-    color: #f9f1f0;
-    background: #f79489;
+.ft-roboto {
+    font-family: 'Roboto', sans-serif;
 }
 
-::selection {
-    color: #f9f1f0;
-    background: #f79489;
+.ft-road-rage {
+    font-family: 'Road Rage', sans-serif;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+h2 {
+    font-size: 3.5em;
+    font-family: 'Road Rage', sans-serif;
 }
 
 /**
  *  SECTION
  */
-body .section {
-    height: 100%;
+
+div.section {
+    height: 100vh;
 }
 
 /**
  *  SECTION - ACCUEIL
  */
-#accueil .row {
-    height: 50%;
+#accueil {
+    position: relative;
+    z-index: 1;
 }
 
-#accueil .row:nth-child(2):before {
+#accueil:before {
     background: center / cover no-repeat url('https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_960_720.jpg');
     content:"";
     top: 0;
@@ -47,50 +49,72 @@ body .section {
     right: 0;
     position: absolute;
     z-index: -1;
-    opacity: 0.75;
+    opacity: 0.65;
 }
 
-#accueil .title h1 {
-    font-size: 7em;
-}
-
-#accueil .title h2 {
-    font-size: 3.5em;
-    font-family: 'Road Rage', sans-serif;
+#titre {
+    padding-bottom: 12%;
 }
 
 /**
  *  SECTION - COMPETENCES
  */
 #competences h1 {
-    font-size: 7em;
-}
-
-#competences h2 {
-    font-size: 3.5em;
-    font-family: 'Road Rage', sans-serif;
+    padding-top: 100px;
 }
 
 /**
  *  SECTION - A PROPOS
  */
 #apropos h1 {
-    font-size: 7em;
-}
-
-#apropos h2 {
-    font-size: 3.5em;
-    font-family: 'Road Rage', sans-serif;
+    padding-top: 100px;
 }
 
 /**
  *  SECTION - CONTACT
  */
 #contact h1 {
-    font-size: 7em;
+    padding-top: 100px;
 }
 
-#contact h2 {
-    font-size: 3.5em;
-    font-family: 'Road Rage', sans-serif;
+/**
+ *  BARRE DE NAVIGATION
+ */
+#navigation {
+    height: 70px;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+nav div {
+    padding: 16px 40px 16px;
+    border-right: 1px solid darkgray;
+}
+
+nav div:last-child {
+    border-right: none;
+}
+
+nav div a {
+    color: #f9f1f0;
+    text-decoration: none;
+}
+
+#navigation:not(.sticky) {
+    position: absolute;
+    bottom: 0;
+    background: rgba(103, 89, 94, 0.75) !important;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 10px 0 5px black;
 }
