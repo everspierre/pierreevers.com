@@ -2,6 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PhpMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
 
@@ -39,18 +40,23 @@ if (!empty($errors)) {
  * Configuration et envoi du mail
  */
 if ($data['success']) {
+    // Chargement des données sécurisée
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    // Paramétrage et envoi du mail
     try {
         $mailer = new PHPMailer();
         $mailer->SMTPDebug = 0;
         $mailer->isSMTP();
-        $mailer->Host = 'smtp.laposte.net';
+        $mailer->Host = $_ENV['SMTP_HOST'];
         $mailer->SMTPAuth = true;
-        $mailer->Username = '****';
-        $mailer->Password = '****';
-        $mailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mailer->Port = 465;
-        $mailer->setFrom('***', 'pierreevers.fr');
-        $mailer->addAddress('everspierre@gmail.com');
+        $mailer->Username = $_ENV['SMTP_USER'];
+        $mailer->Password = $_ENV['SMTP_PASSWORD'];
+        $mailer->SMTPSecure = $_ENV['SMTP_ENCRYPTION'];
+        $mailer->Port = $_ENV['SMTP_PORT'];
+        $mailer->setFrom($_ENV['SMTP_USER'], 'pierreevers.fr');
+        $mailer->addAddress($_ENV['SMTP_TO']);
         $data['success'] = true;
         $mailer->isHTML();
         $mailer->Subject = 'everspierre.fr - email de contact';
