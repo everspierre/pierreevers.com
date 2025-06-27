@@ -5,6 +5,7 @@ $(document).ready(function () {
         // Reset form control
         $('.form-control').removeClass('is-invalid');
         $('.invalid-feedback').remove();
+        $('.alert').remove();
 
         // Get data
         var formData = {
@@ -15,30 +16,30 @@ $(document).ready(function () {
         };
 
         // Send mail and manage return
-        $.ajax({
-            type: form.attr('method'),
-            url: form.attr('action'),
-            data: formData,
-            dataType: "json",
-            encode: true,
-        }).done(function (data) {
-            console.log(data);
+        $.post('process/mailer.php', formData, function(data) {
             if (!data.success) {
                 if (data.errors.envoi) {
-                    $('#submitForm').after('<div class="alert alert-danger d-flex align-items-center" role="alert">\n' +
-                        '  <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>\n' +
-                        '  <div>\n' +
-                        data.errors.envoi +
+                    form.prepend('<div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">\n' +
+                        '  <i class="bi bi-exclamation-triangle-fill"></i>\n' +
+                        '  <div>\n&nbsp;' +
+                            data.errors.envoi +
+                        '  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\n' +
                         '  </div>\n' +
-                        '</div>')
+                        '</div>');
                 }
                 $.each(data.errors, function(input, error) {
                     $('#' + input).addClass('is-invalid');
                     $('#' + input).after('<div class="invalid-feedback">'+error+'</div>')
                 });
             }
-        }).fail(function(data) {
-            console.log(data);
+        }, 'json').fail(function(data) {
+            form.prepend('<div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">\n' +
+                '  <i class="bi bi-exclamation-triangle-fill"></i>\n' +
+                '  <div>\n&nbsp;' +
+                data.errors.envoi +
+                '  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\n' +
+                '  </div>\n' +
+                '</div>');
         });
 
         event.preventDefault();
