@@ -14,3 +14,7 @@ window.onscroll = () => {
 window.onresize = () => {
     shouldStickPosition = navbar.offsetTop;
 }
+
+window.onload = () => {
+    addOrRemoveStickyClass();
+}

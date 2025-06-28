@@ -16,11 +16,11 @@ body {
 }
 
 h1 {
-    font-size: 7em;
+    font-size: 5em;
 }
 
 h2 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-family: 'Road Rage', sans-serif;
 }
 
@@ -123,5 +123,5 @@ nav div a {
 .sticky {
     position: fixed;
     top: 0;
-    box-shadow: 10px 0 5px black;
+    box-shadow: 0 0 5px black;
 }
