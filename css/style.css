@@ -41,7 +41,7 @@ div.section {
 }
 
 #accueil:before {
-    background: center / cover no-repeat url('https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_960_720.jpg');
+    background: center / cover no-repeat url('../images/office.jpg');
     content:"";
     top: 0;
     left: 0;
