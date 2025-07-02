@@ -13,6 +13,7 @@ $(document).ready(function () {
             inputEmail: $("#inputEmail").val(),
             inputPhone: $("#inputPhone").val(),
             inputMessage: $("#inputMessage").val(),
+            responseCode: grecaptcha.getResponse()
         };
 
         // Send mail and manage return
@@ -43,6 +44,7 @@ $(document).ready(function () {
                 $("#inputEmail").val('');
                 $("#inputPhone").val('');
                 $("#inputMessage").val('');
+                grecaptcha.reset();
             }
         }, 'json').fail(function(data) {
             form.prepend('<div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">\n' +
@@ -52,6 +54,7 @@ $(document).ready(function () {
                 '  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\n' +
                 '  </div>\n' +
                 '</div>');
+            grecaptcha.reset();
         });
 
         event.preventDefault();
