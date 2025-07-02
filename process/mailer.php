@@ -7,7 +7,7 @@ use Dotenv\Dotenv;
 require 'vendor/autoload.php';
 
 /**
- * Classe permettant de vérifier le google recaptcha
+ * Classe permettant de vérifier le google recaptcha.
  */
 class reCaptcha {
 
@@ -88,7 +88,7 @@ if (empty($message)) {
 $recaptcha = new reCaptcha($_ENV['GOOGLE_RECAPTCHA_SECRET']);
 
 if (!$recaptcha->checkCode($code)) {
-    $errors['envoi'] = "Merci de vérifier que vous n'êtes pas un robot";
+    $errors['envoi'] = "Veuillez confirmer la case à cocher «Je ne suis pas un robot»";
 }
 
 /**
