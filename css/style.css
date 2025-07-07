@@ -1,0 +1,127 @@
+/**
+ *  RESET
+ */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ft-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ft-road-rage {
+    font-family: 'Road Rage', sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Road Rage', sans-serif;
+}
+
+/**
+ *  SECTION
+ */
+
+div.section {
+    height: 100vh;
+}
+
+/**
+ *  SECTION - ACCUEIL
+ */
+#accueil {
+    position: relative;
+    z-index: 1;
+}
+
+#accueil:before {
+    background: center / cover no-repeat url('../images/office.jpg');
+    content:"";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.65;
+}
+
+#titre {
+    padding-bottom: 12%;
+}
+
+/**
+ *  SECTION - SERVICES
+ */
+#services h1 {
+    padding-top: 100px;
+}
+
+/**
+ *  SECTION - COMPETENCES
+ */
+#competences h1 {
+    padding-top: 100px;
+}
+
+/**
+ *  SECTION - A PROPOS
+ */
+#apropos h1 {
+    padding-top: 100px;
+}
+
+/**
+ *  SECTION - CONTACT
+ */
+#contact h1 {
+    padding-top: 100px;
+}
+
+/**
+ *  BARRE DE NAVIGATION
+ */
+#navigation {
+    height: 70px;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+nav div {
+    padding: 16px 40px 16px;
+    border-right: 1px solid darkgray;
+}
+
+nav div:last-child {
+    border-right: none;
+}
+
+nav div a {
+    color: #f9f1f0;
+    text-decoration: none;
+}
+
+#navigation:not(.sticky) {
+    position: absolute;
+    bottom: 0;
+    background: rgba(103, 89, 94, 0.75) !important;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 5px black;
+}

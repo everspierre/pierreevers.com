@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "Custom Bootstrap",
+  "main": "../index.html",
+  "scripts": {
+    "test": "none"
+  },
+  "author": "Pierre Evers",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.7"
+  }
+}
