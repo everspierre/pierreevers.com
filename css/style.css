@@ -124,6 +124,10 @@ h2 {
         padding: 0 !important;
     }
 
+    #domainesCompetences {
+        margin-top: 0 !important;
+    }
+
     #competencesTechniques {
         margin-top: 3rem !important;
     }
@@ -151,6 +155,7 @@ h2 {
 
     #apropos .min-vh-100 .card {
         width: 100% !important;
+        margin-bottom: 40px;
     }
 }
 
