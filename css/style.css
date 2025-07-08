@@ -29,7 +29,6 @@ h2 {
  */
 
 div.section {
-    min-height: 100vh;
 }
 
 /**
@@ -63,11 +62,23 @@ div.section {
     padding-top: 100px;
 }
 
+@media screen and (max-width: 600px) {
+    #services div.position-absolute {
+        position: relative !important;
+    }
+}
+
 /**
  *  SECTION - COMPETENCES
  */
 #competences h1 {
     padding-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    #competences div.position-absolute {
+        position: relative !important;
+    }
 }
 
 /**
@@ -77,6 +88,12 @@ div.section {
     padding-top: 100px;
 }
 
+@media screen and (max-width: 600px) {
+    #apropos div.position-absolute {
+        position: relative !important;
+    }
+}
+
 /**
  *  SECTION - CONTACT
  */
@@ -84,11 +101,16 @@ div.section {
     padding-top: 100px;
 }
 
+@media screen and (max-width: 600px) {
+    #contact div.position-absolute {
+        position: relative !important;
+    }
+}
+
 /**
  *  BARRE DE NAVIGATION
  */
 #navigation {
-    color: #f9f1f0 !important;
     box-shadow: 0 0 5px black;
 }
 
