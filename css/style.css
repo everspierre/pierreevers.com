@@ -19,7 +19,7 @@ h1 {
     font-size: 5em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 3em;
     }
@@ -30,7 +30,7 @@ h2 {
     font-family: 'Road Rage', sans-serif;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     h2 {
         font-size: 1.5em;
     }
@@ -67,7 +67,7 @@ h2 {
     padding-top: 100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
     #services div.position-absolute {
         position: relative !important;
     }
@@ -92,7 +92,22 @@ h2 {
     padding-top: 100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+
+    #domainesCompetences {
+        margin-top: 6rem !important;
+    }
+    
+    #competencesTechniques {
+        margin-top: 3rem !important;
+    }
+    
+    #competencesFonctionnelles {
+        margin-bottom: 3rem !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
     #competences div.position-absolute {
         position: relative !important;
     }
@@ -108,6 +123,10 @@ h2 {
     #competences .min-vh-100 .row {
         padding: 0 !important;
     }
+
+    #competencesTechniques {
+        margin-top: 3rem !important;
+    }
 }
 
 /**
@@ -117,7 +136,7 @@ h2 {
     padding-top: 100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
     #apropos div.position-absolute {
         position: relative !important;
     }
@@ -142,7 +161,7 @@ h2 {
     padding-top: 100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
     #contact div.position-absolute {
         position: relative !important;
     }
