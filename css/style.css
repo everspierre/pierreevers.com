@@ -19,16 +19,21 @@ h1 {
     font-size: 5em;
 }
 
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
+}
+
 h2 {
     font-size: 2.5em;
     font-family: 'Road Rage', sans-serif;
 }
 
-/**
- *  SECTION
- */
-
-div.section {
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 1.5em;
+    }
 }
 
 /**
@@ -66,6 +71,18 @@ div.section {
     #services div.position-absolute {
         position: relative !important;
     }
+
+    #services h1 {
+        padding-top: 75px;
+    }
+
+    #services .min-vh-100 {
+        align-items: flex-start !important;
+    }
+
+    #services .min-vh-100 .row {
+        padding: 0 !important;
+    }
 }
 
 /**
@@ -78,6 +95,18 @@ div.section {
 @media screen and (max-width: 600px) {
     #competences div.position-absolute {
         position: relative !important;
+    }
+
+    #competences h1 {
+        padding-top: 75px;
+    }
+
+    #competences .min-vh-100 {
+        align-items: flex-start !important;
+    }
+
+    #competences .min-vh-100 .row {
+        padding: 0 !important;
     }
 }
 
@@ -92,6 +121,18 @@ div.section {
     #apropos div.position-absolute {
         position: relative !important;
     }
+
+    #apropos h1 {
+        padding-top: 75px;
+    }
+
+    #apropos .min-vh-100 {
+        align-items: flex-start !important;
+    }
+
+    #apropos .min-vh-100 .card {
+        width: 100% !important;
+    }
 }
 
 /**
@@ -104,6 +145,18 @@ div.section {
 @media screen and (max-width: 600px) {
     #contact div.position-absolute {
         position: relative !important;
+    }
+
+    #contact h1 {
+        padding-top: 75px;
+    }
+
+    #contact .min-vh-100 {
+        align-items: flex-start !important;
+    }
+
+    #contact .min-vh-100 #submitForm {
+        margin-bottom: 40px;
     }
 }
 
