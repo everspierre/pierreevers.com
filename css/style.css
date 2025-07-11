@@ -37,6 +37,22 @@ h2 {
 }
 
 /**
+ *  BARRE DE NAVIGATION
+ */
+#navigation {
+    box-shadow: 0 0 5px black;
+}
+
+.nav-link:not(.nav-contact) {
+    font-family: 'Road Rage', sans-serif;
+    font-size: 2em;
+}
+
+.nav-link.nav-contact {
+    color: #f79489;
+}
+
+/**
  *  SECTION - ACCUEIL
  */
 #accueil {
@@ -182,16 +198,4 @@ h2 {
     #contact .min-vh-100 #submitForm {
         margin-bottom: 40px;
     }
-}
-
-/**
- *  BARRE DE NAVIGATION
- */
-#navigation {
-    box-shadow: 0 0 5px black;
-}
-
-.nav-link {
-    padding: 20px 25px !important;
-    font-family: 'Roboto', sans-serif !important;
 }

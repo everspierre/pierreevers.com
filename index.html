@@ -15,21 +15,45 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navigation">
     <!-- NAVIGATION -->
     <nav id="navigation" class="navbar navbar-expand-lg sticky-top bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
+            <a class="navbar-brand pe-4" href="#">
+                <img src="favicon.ico" alt="Logo" width="48" height="48" class="d-inline-block align-text-top">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav text-secondary">
-                <a class="nav-link" href="#accueil">Accueil</a>
-                <a class="nav-link" href="#services">Services</a>
-                <a class="nav-link" href="#competences">Compétences</a>
-                <a class="nav-link" href="#apropos">À Propos</a>
-                <a class="nav-link" href="#contact">Contact</a>
-            </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="#apropos">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-contact" href="https://github.com/everspierre" target="_blank" alt="Github" title="Github"><i class="bi bi-github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-contact" href="https://www.linkedin.com/in/pierre-evers/" target="_blank" alt="Linkedin" title="Linkedin"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-contact" href="https://wa.link/r9mtqd" target="_blank" alt="Whatsapp" title="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -340,9 +364,9 @@
                 <div class="col-sm-12 col-md-12 col-lg-4 text-center" ><a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#mentionsLegales">Mentions légales</a></div>
                 <div class="col-sm-12 col-md-12 col-lg-4 text-center">Pierre Evers - Copyright © 2025</div>
                 <div class="col-sm-12 col-md-12 col-lg-4 text-center">
-                    <a href="https://github.com/everspierre" target="_blank" class="text-secondary h5" title="Portfolio Github"><i class="bi bi-github"></i></a>&nbsp;
-                    <a href="https://www.linkedin.com/in/pierre-evers/" target="_blank" class="text-secondary h5" title="Page Linkedin"><i class="bi bi-linkedin"></i></a>&nbsp;
-                    <a href="https://wa.link/r9mtqd" target="_blank" class="text-secondary h5" title="Contact Whatsapp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://github.com/everspierre" target="_blank" class="text-secondary h5" alt="Github" title="Github"><i class="bi bi-github"></i></a>&nbsp;
+                    <a href="https://www.linkedin.com/in/pierre-evers/" target="_blank" class="text-secondary h5" alt="Linkedin" title="Linkedin"><i class="bi bi-linkedin"></i></a>&nbsp;
+                    <a href="https://wa.link/r9mtqd" target="_blank" class="text-secondary h5" alt="Whatsapp" title="Whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -440,5 +464,13 @@
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="js/mailer.js"></script>
+    <script>
+        $(function() {
+            let pathname = window.location.pathname
+            let navItem = $( ".nav-item" )
+            navItem.find(".active").removeClass("active");
+            navItem.find(`[href="${pathname}"]`).addClass("active");
+        });
+    </script>
 </body>
 </html>
