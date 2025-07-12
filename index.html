@@ -465,11 +465,10 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="js/mailer.js"></script>
     <script>
-        $(function() {
-            let pathname = window.location.pathname
-            let navItem = $( ".nav-item" )
-            navItem.find(".active").removeClass("active");
-            navItem.find(`[href="${pathname}"]`).addClass("active");
+        $("#navbarNavAltMarkup").on('show.bs.collapse', function() {
+            $('a.nav-link').click(function() {
+                $("#navbarNavAltMarkup").collapse('hide');
+            });
         });
     </script>
 </body>
